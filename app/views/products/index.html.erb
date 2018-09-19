@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ul>
 <% if !!@products %>
   <%@products.each do |product|%>
@@ -9,4 +10,14 @@
   <label>Add to Cart:</label>
   <%= text_field_tag :'product' %><br>
 <%= submit_tag "add to cart"%>
+=======
+<%@products.each do |product| if !@products.empty?%>
+<h3><%="#{product}"%></h3>
+<%end%>
+
+<%= form_tag ("posts/add") do %>
+  <label>Add to Cart:</label>
+  <%= text_field_tag :'item' %><br>
+<%= submit_tag "Add to Cart"%>
+>>>>>>> 9164cc4b5c4793312b91f48440833c12e111aa13
 <%end%>
